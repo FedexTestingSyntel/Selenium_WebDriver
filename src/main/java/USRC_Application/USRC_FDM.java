@@ -44,7 +44,7 @@ public class USRC_FDM {
 			case "EndtoEndEnrollment":
 				//data.add(new Object[] {USRC_D.Level, USRC_D.REGCCreateNewUserURL, USRC_D.LoginUserURL, USRC_D.EnrollmentURL, USRC_D.OAuth_Token, USRC_Data.ContactDetailsList.get(0), MFAC_D.OrgPhone});
 				
-				for (int j = 0 ; j < 1; j++) {
+				for (int j = 0 ; j < 5; j++) {
 					String UserID = Helper_Functions.LoadUserID("L" + strLevel + "FDM");
 					String Password = "Test1234";
 					data.add(new Object[] {strLevel, USRC_D, USRC_D.FDMPostcard_PinType, MFAC_D, MFAC_D.OrgPostcard, UserID, Password, j});
@@ -73,7 +73,9 @@ public class USRC_FDM {
 		try {
 			String Response = "";
 			String ContactDetails[] = USRC_Data.getContactDetails(Contact);
-			
+			//if need to use specific address
+			//ContactDetails = new String[] {"Resmi", "", "Raveendran", "9012223333", "fake@fake.fake", "512 E 13th Avenue", "", "Anchorage", "AK", "99501", "US"};
+
 			//create the new user
 			Response = USRC_API_Endpoints.NewFCLUser(USRC_Details.REGCCreateNewUserURL, ContactDetails, UserID, Password);
 			
@@ -93,7 +95,7 @@ public class USRC_FDM {
 			
 			//3 - request a pin
 			Helper_Functions.PrintOut("Request pin through USRC", false);
-			String ShareID = ContactDetails[11];
+			String ShareID = ParseShareID(Response);
 			Response = USRC_API_Endpoints.CreatePin(USRC_Details.CreatePinURL, USRC_Details.OAuth_Token, Cookie, ShareID, USRC_Org);
 			assertThat(Response, containsString("successful\":true"));
 		
@@ -123,7 +125,7 @@ public class USRC_FDM {
 	
 	
 	
-	@Test (dataProvider = "dp", priority = 1, description = "380527")
+	@Test (dataProvider = "dp", priority = 1, description = "380527", enabled = false)
 	public void EndtoEndEnrollment_UserID(USRC_Data USRC_Details, String USRC_Org, MFAC_Data MFAC_Details, String MFAC_Org, String UserID, String Password) {
 		String Cookie = null, UUID = null, fdx_login_fcl_uuid[] = {"","", ""};
 		try {
@@ -177,4 +179,13 @@ public class USRC_FDM {
 			e.printStackTrace();
 		}
 	}
+
+	public static String ParseShareID(String s) {
+		if(s.contains("addressVerificationId") && s.contains("enrollmentOptionsList")) {
+			String start = "addressVerificationId\":\"";
+			return s.substring(s.indexOf(start) + start.length(), s.indexOf("\",\"enrollmentOptionsList"));
+		}
+		return null;
+	}
+
 }

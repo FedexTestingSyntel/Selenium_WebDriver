@@ -38,6 +38,7 @@ public class MFAC_Helper_Functions {
 		}
 		return null;
 	}
+
 	
 	public static Date GetExpiration(String s) {
 		StringTokenizer st = new StringTokenizer(s,"\"");  

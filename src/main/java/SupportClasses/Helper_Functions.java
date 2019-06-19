@@ -22,6 +22,7 @@ import java.util.regex.Pattern;
 import org.openqa.selenium.By;
 import Data_Structures.Account_Data;
 import Data_Structures.User_Data;
+import USRC_Application.USRC_TestData_Update;
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -281,15 +282,13 @@ public class Helper_Functions{
 	}
 	
 	public static void WriteUserToExcel(String UserID, String Password) {
-		int intLevel = Integer.valueOf(Environment.getInstance().getLevel());
+		String Level = Environment.getInstance().getLevel();
 		String Data[][] = new String[][] {{"SSO_LOGIN_DESC", UserID}, {"USER_PASSWORD_DESC", Password}};
-		try {
-			WriteToExcel(DataDirectory + "\\TestingData.xls", "L" + intLevel, Data, -1); 
-		}catch (Exception e) {
+		//try and update the initial testing data sheet first. If it fails then try and update the backup sheet
+		boolean UserRecorded = WriteToExcel(DataDirectory + "\\TestingData.xls", "L" + Level, Data, -1);
+		if (!UserRecorded) {
 			Helper_Functions.PrintOut("Unable to update TestingData.xml. Attempting backup sheet.");
-			WriteToExcel(DataDirectory + "\\TestingDataBackup.xls", "L" + intLevel, Data, -1);
 		}
-		
 	}
 	
 	public static void WriteUserToExcel(User_Data User_Info) {

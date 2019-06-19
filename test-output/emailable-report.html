@@ -9,11 +9,11 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">7,716</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">5</td><td class="num">171,351</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">USRC_Application.USRC_FDM</td><td><a href="#m0">EndtoEndEnrollment</a></td><td rowspan="1">1560956818488</td><td rowspan="1">6180</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">USRC_Application.USRC_FDM</td><td><a href="#m0">EndtoEndEnrollment</a></td><td rowspan="5">1560968828333</td><td rowspan="5">15732</td></tr><tr class="failedeven"><td><a href="#m1">EndtoEndEnrollment</a></td></tr><tr class="failedeven"><td><a href="#m2">EndtoEndEnrollment</a></td></tr><tr class="failedeven"><td><a href="#m3">EndtoEndEnrollment</a></td></tr><tr class="failedeven"><td><a href="#m4">EndtoEndEnrollment</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">USRC_Application.USRC_FDM#EndtoEndEnrollment</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>6</td><td>Data_Structures.USRC_Data@4b8729ff</td><td>POSTAL</td><td>Data_Structures.MFAC_Data@61710c6</td><td>FDM-POSTCARD-PIN</td><td>L6FDM061919T100658stid</td><td>Test1234</td><td>0</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">java.lang.AssertionError: 
+<h2>Default test</h2><h3 id="m0">USRC_Application.USRC_FDM#EndtoEndEnrollment</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>6</td><td>Data_Structures.USRC_Data@4d411036</td><td>POSTAL</td><td>Data_Structures.MFAC_Data@7adbd080</td><td>FDM-POSTCARD-PIN</td><td>L6FDM061919T132452imde</td><td>Test1234</td><td>2</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">java.lang.AssertionError: 
 Expected: a string containing &quot;enrollmentOptionsList&quot;
      but: was &quot;{
     &quot;error&quot;: &quot;invalid_request&quot;,
@@ -22,7 +22,148 @@ Expected: a string containing &quot;enrollmentOptionsList&quot;
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.junit.Assert.assertThat(Assert.java:956)
 	at org.junit.Assert.assertThat(Assert.java:923)
-	at USRC_Application.USRC_FDM.EndtoEndEnrollment(USRC_FDM.java:92)
+	at USRC_Application.USRC_FDM.EndtoEndEnrollment(USRC_FDM.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">USRC_Application.USRC_FDM#EndtoEndEnrollment</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>6</td><td>Data_Structures.USRC_Data@4d411036</td><td>POSTAL</td><td>Data_Structures.MFAC_Data@7adbd080</td><td>FDM-POSTCARD-PIN</td><td>L6FDM061919T132452pazw</td><td>Test1234</td><td>0</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">java.lang.AssertionError: 
+Expected: a string containing &quot;successful\&quot;:true&quot;
+     but: was &quot;{&quot;successful&quot;:false,&quot;errorList&quot;:[{&quot;code&quot;:&quot;UNEXPECTED_ERROR&quot;,&quot;message&quot;:&quot;We were unable to process your request. Please try again.&quot;,&quot;contextList&quot;:[&quot;SENDER&quot;],&quot;source&quot;:&quot;FCL&quot;}]}&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at USRC_Application.USRC_FDM.EndtoEndEnrollment(USRC_FDM.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">USRC_Application.USRC_FDM#EndtoEndEnrollment</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>6</td><td>Data_Structures.USRC_Data@4d411036</td><td>POSTAL</td><td>Data_Structures.MFAC_Data@7adbd080</td><td>FDM-POSTCARD-PIN</td><td>L6FDM061919T132452avah</td><td>Test1234</td><td>4</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">java.lang.AssertionError: 
+Expected: a string containing &quot;enrollmentOptionsList&quot;
+     but: was &quot;{
+    &quot;error&quot;: &quot;invalid_request&quot;,
+    &quot;error_description&quot;: &quot;validation error&quot;
+}&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at USRC_Application.USRC_FDM.EndtoEndEnrollment(USRC_FDM.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">USRC_Application.USRC_FDM#EndtoEndEnrollment</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>6</td><td>Data_Structures.USRC_Data@4d411036</td><td>POSTAL</td><td>Data_Structures.MFAC_Data@7adbd080</td><td>FDM-POSTCARD-PIN</td><td>L6FDM061919T132452jmpz</td><td>Test1234</td><td>3</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">java.lang.AssertionError: 
+Expected: a string containing &quot;enrollmentOptionsList&quot;
+     but: was &quot;{
+    &quot;error&quot;: &quot;invalid_request&quot;,
+    &quot;error_description&quot;: &quot;validation error&quot;
+}&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at USRC_Application.USRC_FDM.EndtoEndEnrollment(USRC_FDM.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">USRC_Application.USRC_FDM#EndtoEndEnrollment</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>6</td><td>Data_Structures.USRC_Data@4d411036</td><td>POSTAL</td><td>Data_Structures.MFAC_Data@7adbd080</td><td>FDM-POSTCARD-PIN</td><td>L6FDM061919T132452fcpj</td><td>Test1234</td><td>1</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">java.lang.AssertionError: 
+Expected: a string containing &quot;enrollmentOptionsList&quot;
+     but: was &quot;{
+    &quot;error&quot;: &quot;invalid_request&quot;,
+    &quot;error_description&quot;: &quot;validation error&quot;
+}&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at USRC_Application.USRC_FDM.EndtoEndEnrollment(USRC_FDM.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)

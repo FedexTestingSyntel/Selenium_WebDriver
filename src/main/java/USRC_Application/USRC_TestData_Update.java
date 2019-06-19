@@ -126,7 +126,7 @@ public class USRC_TestData_Update {
 	}
 
 	@Test (dataProvider = "dp", enabled = false)
-	public void CheckLogin(String Level, User_Data User_Info) {
+	public static void CheckLogin(String Level, User_Data User_Info) {
 		Environment.getInstance().setLevel(Level);
 		USRC_Data USRC_Details = USRC_Data.LoadVariables(Level);
 		
@@ -227,7 +227,7 @@ public class USRC_TestData_Update {
 		}
 	}
 	
-	public String[][] FDM_Access(String Level, String Details[][], String USRCURL, String Cookies) {
+	public static String[][] FDM_Access(String Level, String Details[][], String USRCURL, String Cookies) {
 		String Response = USRC_API_Endpoints.RecipientProfile(USRCURL, Cookies);
 		Details = Arrays.copyOf(Details, Details.length + 1);
 		
@@ -239,7 +239,7 @@ public class USRC_TestData_Update {
 		return Details;
 	}
 	
-	public String[][] WCRV_Access(String Level, String Details[][], String Cookies) {
+	public static String[][] WCRV_Access(String Level, String Details[][], String Cookies) {
 		PRDC_Data PRDC_D = PRDC_Data.LoadVariables(Level);
 		String AccountDetails = PRDC_API_Endpoints.PRDC_Accounts_Call(PRDC_D.AccountsURL, Cookies);
 		String WCRV_Access = "";
@@ -267,7 +267,7 @@ public class USRC_TestData_Update {
 		return Details;
 	}
 
-	public String[][] App_Role_Info_Check(String Level, String Details[][], String Cookies){
+	public static String[][] App_Role_Info_Check(String Level, String Details[][], String Cookies){
 		USRC_Data USRC_Details = USRC_Data.LoadVariables(Level);
 		
 		String AccountRetrievalRequest = USRC_API_Endpoints.AccountRetrievalRequest(USRC_Details.GenericUSRCURL, Cookies);
@@ -311,7 +311,7 @@ public class USRC_TestData_Update {
 		return Details;
 	}
 	
-	public String[][] Migration_And_Manage_Check(String Level, String Details[][], String Cookies){
+	public static String[][] Migration_And_Manage_Check(String Level, String Details[][], String Cookies){
 		ADMC_Data ADMC_Details = ADMC_Data.LoadVariables(Level);
 		
 		String AccountRetrievalRequest = ADMC_API_Endpoints.RoleAndStatus(ADMC_Details.RoleAndStatusURL, Cookies);
@@ -346,7 +346,7 @@ public class USRC_TestData_Update {
 		return Details;
 	}
 	
-	public String[][] Linkage_Indicator(String Level, String Details[][], String USRCURL, String Cookies, String AccountNumber, String AccountKey) {
+	public static String[][] Linkage_Indicator(String Level, String Details[][], String USRCURL, String Cookies, String AccountNumber, String AccountKey) {
 		String Response = USRC_API_Endpoints.RecipientProfile(USRCURL, Cookies);
 		Details = Arrays.copyOf(Details, Details.length + 1);
 		

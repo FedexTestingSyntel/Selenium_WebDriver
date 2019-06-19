@@ -154,7 +154,11 @@ public class USRC_Data {
 		return DC;
 	}
 	
+	static String BearerTokens[] = new String[] {"", "", "", "", "", "", ""};
 	public static String LoadBearerToken(USRC_Data DC){
+		if (!DC.Level.contentEquals("") && !BearerTokens[Integer.parseInt(DC.Level)].contentEquals("")) {
+			return BearerTokens[Integer.parseInt(DC.Level)];
+		}
 		//generate the OAuthToken, please note that this is not valid on L1 as API calls cannot be used on that level
 		if (!DC.Level.contentEquals("1")) {
 			DC.OAuth_Token = General_API_Calls.getAuthToken(DC.OAuth_Token_URL, DC.OAuth_Token_Client_ID , DC.OAuth_Token_Client_Secret);
@@ -185,10 +189,10 @@ public class USRC_Data {
   	}
 
 	public static String[] getContactDetails(int con) {
-		if (ContactDetailsList.size() < con){
+		if (con <= ContactDetailsList.size()){
 			return ContactDetailsList.get(con);
 		}else {
-			return ContactDetailsList.get(con % ContactDetailsList.size());
+			return ContactDetailsList.get((con % ContactDetailsList.size()));
 		}
 	}
 }

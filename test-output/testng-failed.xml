@@ -6,7 +6,7 @@
       <class name="USRC_Application.USRC_FDM">
         <methods>
           <include name="beforeClass"/>
-          <include name="EndtoEndEnrollment" invocation-numbers="0"/>
+          <include name="EndtoEndEnrollment" invocation-numbers="0 1 2 3 4"/>
         </methods>
       </class> <!-- USRC_Application.USRC_FDM -->
     </classes>
