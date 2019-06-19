@@ -60,7 +60,7 @@ public class WCRV_Functions{
 	//intra = domestic, notintra = international
  	public static String[] WCRV_Generate(String CountryCode, String User, String Password, String Service, int numServicetoSelect) throws Exception{
  		Service = Service.toUpperCase();
-
+ 		String RateSheetID = "";
 		try {
 			WebDriver_Functions.Login(User, Password);
 				
@@ -174,7 +174,7 @@ public class WCRV_Functions{
 			WebDriver_Functions.Click(By.id("wcrv-submit"));
 			WebDriver_Functions.WaitForText(By.cssSelector("h1"), "Rate Sheet Request Confirmation");
 			WebDriver_Functions.WaitForText(By.xpath("//div[@id='modalWindowSuccess']/div/div/div/div/label[4]"), RateSheetName);
-			String RateSheetID = WebDriver_Functions.GetText(By.xpath("//div[@id='modalWindowSuccess']/div/div/div/div[2]/label[2]/b")).substring(2);
+			RateSheetID = WebDriver_Functions.GetText(By.xpath("//div[@id='modalWindowSuccess']/div/div/div/div[2]/label[2]/b")).substring(2);
 			//.substring(2) is to remove the "# " of the rate sheet id.
 			Helper_Functions.PrintOut(RateSheetName + " was successfully submitted with ID of " + RateSheetID, true);
 			WebDriver_Functions.takeSnapShot(RateSheetName + "Conf.png");
@@ -203,7 +203,7 @@ public class WCRV_Functions{
 			//need to create a new thread here to wait 10mins then check if rate sheet is completed then download.
 		} catch (Exception e) {
 			Helper_Functions.PrintOut("Not able to complete WCRV_Generate", true);
-			throw e;
+			throw new Exception(RateSheetID + e.getLocalizedMessage());
 		}
  	}//end WCRV_Generate
  

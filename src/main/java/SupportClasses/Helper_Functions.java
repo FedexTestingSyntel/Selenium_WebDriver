@@ -14,16 +14,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.Date;
-import java.util.List;
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
 import org.openqa.selenium.By;
 import Data_Structures.Account_Data;
 import Data_Structures.User_Data;
@@ -288,7 +283,13 @@ public class Helper_Functions{
 	public static void WriteUserToExcel(String UserID, String Password) {
 		int intLevel = Integer.valueOf(Environment.getInstance().getLevel());
 		String Data[][] = new String[][] {{"SSO_LOGIN_DESC", UserID}, {"USER_PASSWORD_DESC", Password}};
-		WriteToExcel(DataDirectory + "\\TestingData.xls", "L" + intLevel, Data, -1); 
+		try {
+			WriteToExcel(DataDirectory + "\\TestingData.xls", "L" + intLevel, Data, -1); 
+		}catch (Exception e) {
+			Helper_Functions.PrintOut("Unable to update TestingData.xml. Attempting backup sheet.");
+			WriteToExcel(DataDirectory + "\\TestingDataBackup.xls", "L" + intLevel, Data, -1);
+		}
+		
 	}
 	
 	public static void WriteUserToExcel(User_Data User_Info) {

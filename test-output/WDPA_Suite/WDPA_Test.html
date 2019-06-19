@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>WDPA_Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/5/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 24 15:46:47 CDT 2019</td>
+<td>Started on:</td><td>Mon Jun 10 13:42:37 CDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>264 seconds (264313 ms)</td>
+<tr><td>Total time:</td><td>224 seconds (224592 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,19 +75,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='WDPA_Application.WDPA_SmokeTest.WDPA_Express()'><b>WDPA_Express</b><br>Test class: WDPA_Application.WDPA_SmokeTest<br>Parameters: 6, US, L61FXFUS630151929, Test1234</td>
-<td><div><pre>java.lang.AssertionError: Please correct the error(s) in red.
-	at WDPA_Application.WDPA_SmokeTest.WDPA_Express(WDPA_SmokeTest.java:106)
+<td title='WDPA_Application.WDPA_SmokeTest.WDPA_ExpressFreight()'><b>WDPA_ExpressFreight</b><br>Test class: WDPA_Application.WDPA_SmokeTest<br>Parameters: 2, US, L2pickupUS, Test1234</td>
+<td><div><pre>java.lang.AssertionError: Element is not present on page.  By.id: address.account.ContactName
+	at WDPA_Application.WDPA_SmokeTest.WDPA_ExpressFreight(WDPA_SmokeTest.java:117)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace620316146", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace620316146'><pre>java.lang.AssertionError: Please correct the error(s) in red.
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace759670695", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace759670695'><pre>java.lang.AssertionError: Element is not present on page.  By.id: address.account.ContactName
 	at org.testng.Assert.fail(Assert.java:96)
-	at WDPA_Application.WDPA_SmokeTest.WDPA_Express(WDPA_SmokeTest.java:106)
+	at WDPA_Application.WDPA_SmokeTest.WDPA_ExpressFreight(WDPA_SmokeTest.java:117)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -104,54 +104,22 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>260</td>
+<td>124</td>
 <td>WDPA_Application.WDPA_SmokeTest@667a738</td></tr>
 <tr>
-<td title='WDPA_Application.WDPA_SmokeTest.WDPA_ExpressFreight()'><b>WDPA_ExpressFreight</b><br>Test class: WDPA_Application.WDPA_SmokeTest<br>Parameters: 6, US, L61FXFUS630151929, Test1234</td>
-<td><div><pre>java.lang.AssertionError: Text still present.  By.id: package.expFreight.closeTime - 
-	at WDPA_Application.WDPA_SmokeTest.WDPA_ExpressFreight(WDPA_SmokeTest.java:120)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace495293418", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace495293418'><pre>java.lang.AssertionError: Text still present.  By.id: package.expFreight.closeTime - 
-	at org.testng.Assert.fail(Assert.java:96)
-	at WDPA_Application.WDPA_SmokeTest.WDPA_ExpressFreight(WDPA_SmokeTest.java:120)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
-	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
-<td>219</td>
-<td>WDPA_Application.WDPA_SmokeTest@667a738</td></tr>
-<tr>
-<td title='WDPA_Application.WDPA_SmokeTest.WDPA_Ground()'><b>WDPA_Ground</b><br>Test class: WDPA_Application.WDPA_SmokeTest<br>Parameters: 6, US, L6C1FXFUS630081440, Test1234</td>
+<td title='WDPA_Application.WDPA_SmokeTest.WDPA_Ground()'><b>WDPA_Ground</b><br>Test class: WDPA_Application.WDPA_SmokeTest<br>Parameters: 2, US, L2SDOGround, Test1234</td>
 <td><div><pre>java.lang.AssertionError: The system has experienced an unexpected problem and is unable to complete your request. Please contact FedEx Customer Service to schedule your pickup.
-	at WDPA_Application.WDPA_SmokeTest.WDPA_Ground(WDPA_SmokeTest.java:93)
+	at WDPA_Application.WDPA_SmokeTest.WDPA_Ground(WDPA_SmokeTest.java:92)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace450882916", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace450882916'><pre>java.lang.AssertionError: The system has experienced an unexpected problem and is unable to complete your request. Please contact FedEx Customer Service to schedule your pickup.
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace729764681", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace729764681'><pre>java.lang.AssertionError: The system has experienced an unexpected problem and is unable to complete your request. Please contact FedEx Customer Service to schedule your pickup.
 	at org.testng.Assert.fail(Assert.java:96)
-	at WDPA_Application.WDPA_SmokeTest.WDPA_Ground(WDPA_SmokeTest.java:93)
+	at WDPA_Application.WDPA_SmokeTest.WDPA_Ground(WDPA_SmokeTest.java:92)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -168,22 +136,42 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>229</td>
+<td>155</td>
 <td>WDPA_Application.WDPA_SmokeTest@667a738</td></tr>
 <tr>
-<td title='WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight()'><b>WDPA_LTLFreight</b><br>Test class: WDPA_Application.WDPA_SmokeTest<br>Parameters: 6, US, L6C1FXFUS630081440, Test1234</td>
-<td><div><pre>java.lang.AssertionError: Text still present.  By.id: freightPickupInfo.readyTime - 
-	at WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight(WDPA_SmokeTest.java:133)
+<td title='WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight()'><b>WDPA_LTLFreight</b><br>Test class: WDPA_Application.WDPA_SmokeTest<br>Parameters: 2, US, L2FreightUserUS, Test1234</td>
+<td><div><pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;module.address._headerHide&quot;}
+  (Session info: chrome=74.0.3729.169)
+  (Driver info: chromedriver=72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 29.99 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;WTC-5159473-l2&apos;, ip: &apos;172.27.142.145&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61670}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38), userDataDir=C:\Users\5159473\AppData\Local\Temp\scoped_dir38896_13736}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=74.0.3729.169, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 1e4ea25da27ac06567f45628ba1028a2
+*** Element info: {Using=id, value=module.address._headerHide}
+	at WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight(WDPA_SmokeTest.java:129)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1486903354", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1486903354'><pre>java.lang.AssertionError: Text still present.  By.id: freightPickupInfo.readyTime - 
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1052236520", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1052236520'><pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;module.address._headerHide&quot;}
+  (Session info: chrome=74.0.3729.169)
+  (Driver info: chromedriver=72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 29.99 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;WTC-5159473-l2&apos;, ip: &apos;172.27.142.145&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61670}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38), userDataDir=C:\Users\5159473\AppData\Local\Temp\scoped_dir38896_13736}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=74.0.3729.169, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 1e4ea25da27ac06567f45628ba1028a2
+*** Element info: {Using=id, value=module.address._headerHide}
 	at org.testng.Assert.fail(Assert.java:96)
-	at WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight(WDPA_SmokeTest.java:133)
+	at WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight(WDPA_SmokeTest.java:129)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -200,22 +188,30 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>188</td>
+<td>128</td>
 <td>WDPA_Application.WDPA_SmokeTest@667a738</td></tr>
 <tr>
-<td title='WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight_Anonymous()'><b>WDPA_LTLFreight_Anonymous</b><br>Test class: WDPA_Application.WDPA_SmokeTest<br>Parameters: 6, US</td>
-<td><div><pre>java.lang.AssertionError: Text still present.  By.id: address.accountStateProvince.field1 - 
-	at WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight_Anonymous(WDPA_SmokeTest.java:146)
+<td title='WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight_Anonymous()'><b>WDPA_LTLFreight_Anonymous</b><br>Test class: WDPA_Application.WDPA_SmokeTest<br>Parameters: 2, US</td>
+<td><div><pre>java.lang.AssertionError: Cannot locate option with index: 1
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;WTC-5159473-l2&apos;, ip: &apos;172.27.142.145&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: driver.version: unknown
+	at WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight_Anonymous(WDPA_SmokeTest.java:141)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace822572948", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace822572948'><pre>java.lang.AssertionError: Text still present.  By.id: address.accountStateProvince.field1 - 
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace990161121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace990161121'><pre>java.lang.AssertionError: Cannot locate option with index: 1
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;WTC-5159473-l2&apos;, ip: &apos;172.27.142.145&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: driver.version: unknown
 	at org.testng.Assert.fail(Assert.java:96)
-	at WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight_Anonymous(WDPA_SmokeTest.java:146)
+	at WDPA_Application.WDPA_SmokeTest.WDPA_LTLFreight_Anonymous(WDPA_SmokeTest.java:141)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -232,7 +228,20 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>100</td>
+<td>65</td>
+<td>WDPA_Application.WDPA_SmokeTest@667a738</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='WDPA_Application.WDPA_SmokeTest.WDPA_Express()'><b>WDPA_Express</b><br>Test class: WDPA_Application.WDPA_SmokeTest<br>Parameters: 2, US, L2pickupUS, Test1234</td>
+<td></td>
+<td>222</td>
 <td>WDPA_Application.WDPA_SmokeTest@667a738</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
@@ -243,14 +252,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='SupportClasses.Environment.SetEvironmentLevel()'><b>SetEvironmentLevel</b><br>Test class: SupportClasses.Environment<br>Parameters: 6</td>
+<td title='SupportClasses.Environment.SetEvironmentLevel()'><b>SetEvironmentLevel</b><br>Test class: SupportClasses.Environment<br>Parameters: 2</td>
 <td><div><pre>org.testng.SkipException: Forcing skip, will be deleted from report later
 	at SupportClasses.Environment.SetEvironmentLevel(Environment.java:69)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace389537602", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace389537602'><pre>org.testng.SkipException: Forcing skip, will be deleted from report later
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace595900343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace595900343'><pre>org.testng.SkipException: Forcing skip, will be deleted from report later
 	at SupportClasses.Environment.SetEvironmentLevel(Environment.java:69)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)

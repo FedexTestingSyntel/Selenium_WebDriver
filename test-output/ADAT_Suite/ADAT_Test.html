@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>ADAT_Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/14/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jun 07 14:02:47 CDT 2019</td>
+<td>Started on:</td><td>Sat Jun 15 14:54:18 CDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4715 ms)</td>
+<tr><td>Total time:</td><td>8 seconds (8395 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,82 +67,598 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ADAT_Application.ADAT.ADAT_AddressVelocity()'><b>ADAT_AddressVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-POSTCARD-PIN</td>
-<td></td>
+<td title='ADAT_Application.ADAT.ADAT_AddressVelocity()'><b>ADAT_AddressVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-POSTCARD-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_AddressVelocity(ADAT.java:95)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2079194900", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2079194900'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_AddressVelocity(ADAT.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>1</td>
+<td>ADAT_Application.ADAT@36f0f1be</td></tr>
+<tr>
+<td title='ADAT_Application.ADAT.ADAT_AddressVelocity()'><b>ADAT_AddressVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-PHONE-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_AddressVelocity(ADAT.java:95)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1521439922", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1521439922'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_AddressVelocity(ADAT.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>1</td>
+<td>ADAT_Application.ADAT@36f0f1be</td></tr>
+<tr>
+<td title='ADAT_Application.ADAT.ADAT_CreatePin()'><b>ADAT_CreatePin</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-PHONE-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;FDM-PHONE-PIN&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_CreatePin(ADAT.java:86)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1908326685", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1908326685'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;FDM-PHONE-PIN&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_CreatePin(ADAT.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
 <td>2</td>
 <td>ADAT_Application.ADAT@36f0f1be</td></tr>
 <tr>
-<td title='ADAT_Application.ADAT.ADAT_AddressVelocity()'><b>ADAT_AddressVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-PHONE-PIN</td>
-<td></td>
+<td title='ADAT_Application.ADAT.ADAT_CreatePin()'><b>ADAT_CreatePin</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-POSTCARD-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;FDM-POSTCARD-PIN&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_CreatePin(ADAT.java:86)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1030374455", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1030374455'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;FDM-POSTCARD-PIN&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_CreatePin(ADAT.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
 <td>2</td>
 <td>ADAT_Application.ADAT@36f0f1be</td></tr>
 <tr>
-<td title='ADAT_Application.ADAT.ADAT_CreatePin()'><b>ADAT_CreatePin</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-PHONE-PIN</td>
-<td></td>
-<td>0</td>
-<td>ADAT_Application.ADAT@36f0f1be</td></tr>
-<tr>
-<td title='ADAT_Application.ADAT.ADAT_CreatePin()'><b>ADAT_CreatePin</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-POSTCARD-PIN</td>
-<td></td>
-<td>0</td>
-<td>ADAT_Application.ADAT@36f0f1be</td></tr>
-<tr>
-<td title='ADAT_Application.ADAT.ADAT_CreateUser()'><b>ADAT_CreateUser</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-PHONE-PIN</td>
-<td></td>
-<td>0</td>
-<td>ADAT_Application.ADAT@36f0f1be</td></tr>
-<tr>
-<td title='ADAT_Application.ADAT.ADAT_CreateUser()'><b>ADAT_CreateUser</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-POSTCARD-PIN</td>
-<td></td>
-<td>0</td>
-<td>ADAT_Application.ADAT@36f0f1be</td></tr>
-<tr>
-<td title='ADAT_Application.ADAT.ADAT_PhoneVelocity()'><b>ADAT_PhoneVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-POSTCARD-PIN</td>
-<td></td>
+<td title='ADAT_Application.ADAT.ADAT_CreateUser()'><b>ADAT_CreateUser</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-PHONE-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;udsTransactionID&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_CreateUser(ADAT.java:70)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace983363916", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace983363916'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;udsTransactionID&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_CreateUser(ADAT.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
 <td>1</td>
 <td>ADAT_Application.ADAT@36f0f1be</td></tr>
 <tr>
-<td title='ADAT_Application.ADAT.ADAT_PhoneVelocity()'><b>ADAT_PhoneVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-PHONE-PIN</td>
-<td></td>
+<td title='ADAT_Application.ADAT.ADAT_CreateUser()'><b>ADAT_CreateUser</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-POSTCARD-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;udsTransactionID&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_CreateUser(ADAT.java:70)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace148480197", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace148480197'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;udsTransactionID&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_CreateUser(ADAT.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
 <td>1</td>
 <td>ADAT_Application.ADAT@36f0f1be</td></tr>
 <tr>
-<td title='ADAT_Application.ADAT.ADAT_PostcardVelocity()'><b>ADAT_PostcardVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-PHONE-PIN</td>
-<td></td>
+<td title='ADAT_Application.ADAT.ADAT_PhoneVelocity()'><b>ADAT_PhoneVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-POSTCARD-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_PhoneVelocity(ADAT.java:113)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1645528862", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1645528862'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_PhoneVelocity(ADAT.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
 <td>1</td>
 <td>ADAT_Application.ADAT@36f0f1be</td></tr>
 <tr>
-<td title='ADAT_Application.ADAT.ADAT_PostcardVelocity()'><b>ADAT_PostcardVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-POSTCARD-PIN</td>
-<td></td>
+<td title='ADAT_Application.ADAT.ADAT_PhoneVelocity()'><b>ADAT_PhoneVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-PHONE-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_PhoneVelocity(ADAT.java:113)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1776738649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1776738649'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_PhoneVelocity(ADAT.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
 <td>1</td>
 <td>ADAT_Application.ADAT@36f0f1be</td></tr>
 <tr>
-<td title='ADAT_Application.ADAT.ADAT_VerifyPin()'><b>ADAT_VerifyPin</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-POSTCARD-PIN</td>
-<td></td>
-<td>0</td>
+<td title='ADAT_Application.ADAT.ADAT_PostcardVelocity()'><b>ADAT_PostcardVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-PHONE-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_PostcardVelocity(ADAT.java:104)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1840131955", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1840131955'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_PostcardVelocity(ADAT.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>1</td>
 <td>ADAT_Application.ADAT@36f0f1be</td></tr>
 <tr>
-<td title='ADAT_Application.ADAT.ADAT_VerifyPin()'><b>ADAT_VerifyPin</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-PHONE-PIN</td>
-<td></td>
-<td>0</td>
+<td title='ADAT_Application.ADAT.ADAT_PostcardVelocity()'><b>ADAT_PostcardVelocity</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-POSTCARD-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_PostcardVelocity(ADAT.java:104)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2053561554", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2053561554'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;&lt;rf11:advice&gt;&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT_Endpoints.ADAT_EvaluateRisk(ADAT_Endpoints.java:187)
+	at ADAT_Application.ADAT_Endpoints.VelocityCheck(ADAT_Endpoints.java:24)
+	at ADAT_Application.ADAT.ADAT_PostcardVelocity(ADAT.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>1</td>
 <td>ADAT_Application.ADAT@36f0f1be</td></tr>
 <tr>
-<td title='ADAT_Application.ADAT.ADAT_VerifyPin_Invalid()'><b>ADAT_VerifyPin_Invalid</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-PHONE-PIN</td>
-<td></td>
-<td>0</td>
+<td title='ADAT_Application.ADAT.ADAT_VerifyPin()'><b>ADAT_VerifyPin</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-PHONE-PIN</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.sun.xml.internal.messaging.saaj.soap.impl.ElementImpl.addTextNode(Unknown Source)
+	at ADAT_Application.ADAT_Endpoints.ADAT_VerifyPin(ADAT_Endpoints.java:148)
+	at ADAT_Application.ADAT.ADAT_VerifyPin(ADAT.java:128)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace805878931", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace805878931'><pre>java.lang.NullPointerException
+	at com.sun.xml.internal.messaging.saaj.soap.impl.ElementImpl.addTextNode(Unknown Source)
+	at ADAT_Application.ADAT_Endpoints.ADAT_VerifyPin(ADAT_Endpoints.java:148)
+	at ADAT_Application.ADAT.ADAT_VerifyPin(ADAT.java:128)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>2</td>
 <td>ADAT_Application.ADAT@36f0f1be</td></tr>
 <tr>
-<td title='ADAT_Application.ADAT.ADAT_VerifyPin_Invalid()'><b>ADAT_VerifyPin_Invalid</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 3, Data_Structures.ADAT_Data@488d53d1, FDM-POSTCARD-PIN</td>
-<td></td>
-<td>0</td>
+<td title='ADAT_Application.ADAT.ADAT_VerifyPin()'><b>ADAT_VerifyPin</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-POSTCARD-PIN</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.sun.xml.internal.messaging.saaj.soap.impl.ElementImpl.addTextNode(Unknown Source)
+	at ADAT_Application.ADAT_Endpoints.ADAT_VerifyPin(ADAT_Endpoints.java:148)
+	at ADAT_Application.ADAT.ADAT_VerifyPin(ADAT.java:128)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace690953407", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace690953407'><pre>java.lang.NullPointerException
+	at com.sun.xml.internal.messaging.saaj.soap.impl.ElementImpl.addTextNode(Unknown Source)
+	at ADAT_Application.ADAT_Endpoints.ADAT_VerifyPin(ADAT_Endpoints.java:148)
+	at ADAT_Application.ADAT.ADAT_VerifyPin(ADAT.java:128)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>2</td>
+<td>ADAT_Application.ADAT@36f0f1be</td></tr>
+<tr>
+<td title='ADAT_Application.ADAT.ADAT_VerifyPin_Invalid()'><b>ADAT_VerifyPin_Invalid</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-POSTCARD-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;The provided authentication credentials are not correct.&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_VerifyPin_Invalid(ADAT.java:151)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace144727318", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace144727318'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;The provided authentication credentials are not correct.&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_VerifyPin_Invalid(ADAT.java:151)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>3</td>
+<td>ADAT_Application.ADAT@36f0f1be</td></tr>
+<tr>
+<td title='ADAT_Application.ADAT.ADAT_VerifyPin_Invalid()'><b>ADAT_VerifyPin_Invalid</b><br>Test class: ADAT_Application.ADAT<br>Parameters: 6, Data_Structures.ADAT_Data@219b1935, FDM-PHONE-PIN</td>
+<td><div><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;The provided authentication credentials are not correct.&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_VerifyPin_Invalid(ADAT.java:151)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1303558150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1303558150'><pre>java.lang.AssertionError: 
+Expected: a string containing &quot;The provided authentication credentials are not correct.&quot;
+     but: was &quot;com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.junit.Assert.assertThat(Assert.java:956)
+	at org.junit.Assert.assertThat(Assert.java:923)
+	at ADAT_Application.ADAT.ADAT_VerifyPin_Invalid(ADAT.java:151)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>3</td>
 <td>ADAT_Application.ADAT@36f0f1be</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
@@ -153,14 +669,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='SupportClasses.Environment.SetEvironmentLevel()'><b>SetEvironmentLevel</b><br>Test class: SupportClasses.Environment<br>Parameters: 3</td>
+<td title='SupportClasses.Environment.SetEvironmentLevel()'><b>SetEvironmentLevel</b><br>Test class: SupportClasses.Environment<br>Parameters: 6</td>
 <td><div><pre>org.testng.SkipException: Forcing skip, will be deleted from report later
 	at SupportClasses.Environment.SetEvironmentLevel(Environment.java:69)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2011362905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2011362905'><pre>org.testng.SkipException: Forcing skip, will be deleted from report later
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2096372343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2096372343'><pre>org.testng.SkipException: Forcing skip, will be deleted from report later
 	at SupportClasses.Environment.SetEvironmentLevel(Environment.java:69)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)

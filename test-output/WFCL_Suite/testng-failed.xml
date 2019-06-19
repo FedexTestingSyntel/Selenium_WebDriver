@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="8" guice-stage="DEVELOPMENT" name="Failed suite [WFCL_Suite]">
+<suite thread-count="8" guice-stage="DEVELOPMENT" name="Failed suite [WFCL_Suite]" parallel="methods">
   <listeners>
     <listener class-name="SupportClasses.TestNG_ReportListener"/>
   </listeners>
-  <test thread-count="8" name="WFCL_Test(failed)" parallel="methods">
-    <parameter name="Level" value="3"/>
+  <test thread-count="8" name="WFCL_Test_Invitations(failed)" parallel="methods">
+    <parameter name="Level" value="7"/>
     <classes>
-      <class name="WFCL_Application.WFCL_SmokeTest">
+      <class name="WADM_Application.WADM_Invitation">
         <methods>
-          <include name="WFCL_INETReg" invocation-numbers="0"/>
           <include name="beforeClass"/>
-          <include name="WFCL_AdminReg" invocation-numbers="0"/>
+          <include name="WADM_Invitation_Attempt" invocation-numbers="0 2 1"/>
         </methods>
-      </class> <!-- WFCL_Application.WFCL_SmokeTest -->
+      </class> <!-- WADM_Application.WADM_Invitation -->
     </classes>
-  </test> <!-- WFCL_Test(failed) -->
+  </test> <!-- WFCL_Test_Invitations(failed) -->
 </suite> <!-- Failed suite [WFCL_Suite] -->

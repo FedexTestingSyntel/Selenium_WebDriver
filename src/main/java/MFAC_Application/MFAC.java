@@ -26,7 +26,7 @@ import SupportClasses.Helper_Functions;
 //@Listeners(SupportClasses.TestNG_ReportListener.class)
 
 public class MFAC{
-	static String LevelsToTest = "7"; //Can but updated to test multiple levels at once if needed. Setting to "23" will test both level 2 and level 3.
+	static String LevelsToTest = "23"; //Can but updated to test multiple levels at once if needed. Setting to "23" will test both level 2 and level 3.
 	final boolean TestExpiration = true;//flag to determine if the expiration scenarios should be tested. When set to false those tests will not be executed.
 	
 	static CopyOnWriteArrayList<String[]> ExpirationData = new CopyOnWriteArrayList<String[]>(); 
@@ -44,7 +44,7 @@ public class MFAC{
 			String Level = String.valueOf(Environment.LevelsToTest.charAt(i));
 			MFAC_Data c = MFAC_Data.LoadVariables(Level);
 			switch (m.getName()) { //Based on the method that is being called the array list will be populated. This will make the TestNG Pass/Fail results more relevant.
-			case "AddressVelocity":
+			case "MFAC_AddressVelocity":
 				if (!c.Level.contentEquals("1")){
 					data.add(new Object[] {Level, c.OrgPostcard, c.OAuth_Token, c.AVelocityURL, c.AddressVelocityThreshold});
 					data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.AVelocityURL, c.AddressVelocityThreshold});
@@ -54,7 +54,7 @@ public class MFAC{
     				data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.DVelocityURL, c.AddressVelocityThreshold});
     			}
     			break;
-    		case "IssuePin":
+    		case "MFAC_IssuePin":
     			if (!c.Level.contentEquals("1")){
     				data.add(new Object[] {Level, c.OrgPostcard, c.OAuth_Token, c.AIssueURL});
     				data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.AIssueURL});
@@ -64,11 +64,11 @@ public class MFAC{
     				data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.DIssueURL});
     			}
     			break;
-    		case "DetermineLockoutTime"://only need to test API call as this is a helper test to determine current lockouts set.
+    		case "MFAC_DetermineLockoutTime"://only need to test API call as this is a helper test to determine current lockouts set.
     			data.add(new Object[] {Level, c.OrgPostcard, c.OAuth_Token, c.AIssueURL});
     			data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.AIssueURL});
     			break;
-    		case "IssuePinVelocity":
+    		case "MFAC_IssuePinVelocity":
     			if (!c.Level.contentEquals("1")){
     				data.add(new Object[] {Level, c.OrgPostcard, c.OAuth_Token, c.AIssueURL, c.PinVelocityThresholdPostcard});
     				data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.AIssueURL, c.PinVelocityThresholdPhone});
@@ -78,9 +78,9 @@ public class MFAC{
     				data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.DIssueURL, c.PinVelocityThresholdPhone});
     			}
     			break;
-    		case "VerifyPinValid":
-    		case "VerifyPinNoLongerValid":
-    		case "IssuePinExpiration":
+    		case "MFAC_VerifyPinValid":
+    		case "MFAC_VerifyPinNoLongerValid":
+    		case "MFAC_IssuePinExpiration":
     			if (!c.Level.contentEquals("1")){
     				data.add(new Object[] {Level, c.OrgPostcard, c.OAuth_Token, c.AIssueURL, c.AVerifyURL});
     				data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.AIssueURL, c.AVerifyURL});	
@@ -90,7 +90,7 @@ public class MFAC{
     				data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.DIssueURL, c.DVerifyURL});
     			}
     			break;
-    		case "VerifyPinVelocity":
+    		case "MFAC_VerifyPinVelocity":
     			if (!c.Level.contentEquals("1")){
     				data.add(new Object[] {Level, c.OrgPostcard, c.OAuth_Token, c.AIssueURL, c.AVerifyURL, c.PinVelocityThresholdPostcard});
     				data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.AIssueURL, c.AVerifyURL, c.PinVelocityThresholdPhone});
@@ -100,7 +100,7 @@ public class MFAC{
     				data.add(new Object[] {Level, c.OrgPhone, c.OAuth_Token, c.DIssueURL, c.DVerifyURL, c.PinVelocityThresholdPhone});
     			}
     			break;
-    		case "AdditionalEnrollmentExpiration":
+    		case "MFAC_AdditionalEnrollmentExpiration":
     			if (!c.Level.contentEquals("1")){
     				data.add(new Object[] {Level, c.OrgPostcard, c.OrgPhone, c.OAuth_Token, c.AIssueURL, c.AVerifyURL});
     				data.add(new Object[] {Level, c.OrgPhone, c.OrgPostcard, c.OAuth_Token, c.AIssueURL, c.AVerifyURL});
@@ -110,24 +110,24 @@ public class MFAC{
     				data.add(new Object[] {Level, c.OrgPhone, c.OrgPostcard, c.OAuth_Token, c.DIssueURL, c.DVerifyURL});
     			}
     			break;
-    		case "IssuePinExpirationValidate":
+    		case "MFAC_IssuePinExpirationValidate":
     			if (ExpirationData.size() > 0) {
     				ExpirationData.sort((o1, o2) -> o1[1].compareTo(o2[1]));
     			}
     			
     			for (int j = 0 ; j < ExpirationData.size(); j++) {
-    				if (ExpirationData.get(j)[0].contains("IssuePinExpiration")) {
+    				if (ExpirationData.get(j)[0].contains("MFAC_IssuePinExpiration")) {
     					data.add(ExpirationData.get(j));
     					ExpirationData.remove(j);
     				}
     			}
     			break;	
-    		case "AdditionalEnrollmentExpirationValidate":
+    		case "MFAC_AdditionalEnrollmentExpirationValidate":
     			if (ExpirationData.size() > 0) {
     				ExpirationData.sort((o1, o2) -> o1[1].compareTo(o2[1]));
     			}
     			for (int j = 0 ; j < ExpirationData.size(); j++) {
-    				if (ExpirationData.get(j)[0].contains("AdditionalEnrollmentExpiration")) {
+    				if (ExpirationData.get(j)[0].contains("MFAC_AdditionalEnrollmentExpiration")) {
     					data.add(ExpirationData.get(j));
     					ExpirationData.remove(j);
     				}
@@ -139,7 +139,7 @@ public class MFAC{
 	}
 	
 	@Test(dataProvider = "dp", priority = 2)
-	public void AddressVelocity(String Level, String OrgName, String OAuth_Token, String VelocityURL, int AddressVelocityThreshold) {//220496 Address Velocity
+	public void MFAC_AddressVelocity(String Level, String OrgName, String OAuth_Token, String VelocityURL, int AddressVelocityThreshold) {//220496 Address Velocity
 		Helper_Functions.PrintOut("Verify that the address velocity of " + AddressVelocityThreshold + " is reached and the correct error code is received. This is to replicate too many requests for pin at a given address.", false);
 		String UserName = UserName(), Response;
 		try {
@@ -158,7 +158,7 @@ public class MFAC{
 	}
 	
 	@Test(dataProvider = "dp", priority = 2)
-	public void IssuePin(String Level, String OrgName, String OAuth_Token, String IssueURL){//220459 IssuePin
+	public void MFAC_IssuePin(String Level, String OrgName, String OAuth_Token, String IssueURL){//220459 IssuePin
 		Helper_Functions.PrintOut("Verify that the user is able to request a pin.", false);
 		String Response = null, UserName = UserName();
 		
@@ -175,7 +175,7 @@ public class MFAC{
 	}
 	
 	@Test(dataProvider = "dp", priority = 2)
-	public void IssuePinVelocity(String Level, String OrgName, String OAuth_Token, String IssueURL, int PinVelocityThreshold){//220459 IssuePin
+	public void MFAC_IssuePinVelocity(String Level, String OrgName, String OAuth_Token, String IssueURL, int PinVelocityThreshold){//220459 IssuePin
 		Helper_Functions.PrintOut("Verify that the user can request up to " + PinVelocityThreshold + " pin numbers before unable to request more.", false);
 		String Response = null, UserName = UserName();
 		
@@ -196,7 +196,7 @@ public class MFAC{
 	}
 
 	@Test(dataProvider = "dp", priority = 2)
-	public void VerifyPinValid(String Level, String OrgName, String OAuth_Token, String IssueURL, String VerifyURL){//220462 Verify Pin
+	public void MFAC_VerifyPinValid(String Level, String OrgName, String OAuth_Token, String IssueURL, String VerifyURL){//220462 Verify Pin
 		Helper_Functions.PrintOut("VerifyPinValid: Verify that user is able to request a pin and then verify that can recieve success when using the generated pin.", false);
 		String Response = null, UserName = UserName();
 		
@@ -214,7 +214,7 @@ public class MFAC{
 	}
 	
 	@Test(dataProvider = "dp", priority = 2)
-	public void VerifyPinVelocity(String Level, String OrgName, String OAuth_Token, String IssueURL, String VerifyURL, int PinVelocityThreshold){//220462 Verify Pin
+	public void MFAC_VerifyPinVelocity(String Level, String OrgName, String OAuth_Token, String IssueURL, String VerifyURL, int PinVelocityThreshold){//220462 Verify Pin
 		Helper_Functions.PrintOut("VerifyPinThreshold: When an invalid pin is entered the pin failure message should be returned passed the velocity threshold of " + PinVelocityThreshold + ".", false);
 		String Response = null, UserName = UserName();
 		
@@ -232,7 +232,7 @@ public class MFAC{
 	}
 	
 	@Test(dataProvider = "dp", priority = 2)
-	public void VerifyPinNoLongerValid(String Level, String OrgName, String OAuth_Token, String IssueURL, String VerifyURL){//220462 Verify Pin
+	public void MFAC_VerifyPinNoLongerValid(String Level, String OrgName, String OAuth_Token, String IssueURL, String VerifyURL){//220462 Verify Pin
 		Helper_Functions.PrintOut("VerifyPinNoLongerValid: Verify that when user requests a second pin that the first is no longer valid.", false);
 		String Response = null, UserName = UserName();
 		
@@ -258,7 +258,7 @@ public class MFAC{
 
 	@SuppressWarnings("deprecation")  //add due to the date comparison 
 	@Test(dataProvider = "dp", enabled = TestExpiration, priority = 1)
-	public void IssuePinExpiration(String Level, String OrgName, String OAuth_Token, String IssueURL, String VerifyURL){
+	public void MFAC_IssuePinExpiration(String Level, String OrgName, String OAuth_Token, String IssueURL, String VerifyURL){
 		Helper_Functions.PrintOut("Verify that after a pin is expired it can no longer be used to complete registration.", false);
 		String Response = null, UserName = UserName();
 		
@@ -273,7 +273,7 @@ public class MFAC{
 			Date ExpirationTime = GetExpiration(Response);
 		
 			if (ExpirationTime.getDate() == CurrrentTime.getDate() && ExpirationTime.getMonth() == CurrrentTime.getMonth()) {
-				String Expiration[] = new String[] {"IssuePinExpiration:  " + Response, dateFormat.format(ExpirationTime).toString(), UserName, OrgName, ParsePIN(Response), VerifyURL, OAuth_Token, "PIN.FAILURE"};
+				String Expiration[] = new String[] {Level, "MFAC_IssuePinExpiration:  " + Response, dateFormat.format(ExpirationTime).toString(), UserName, OrgName, ParsePIN(Response), VerifyURL, OAuth_Token, "PIN.FAILURE"};
 				ExpirationData.add(Expiration);
 				Helper_Functions.PrintOut("Will be validated after expiration in later test. --IssuePinExpirationValidate--", false);
 			}else {
@@ -285,8 +285,8 @@ public class MFAC{
 		}
 	}
 
-	@Test(dataProvider = "dp",enabled = TestExpiration,dependsOnMethods = "IssuePinExpiration", priority = 3)
-	public void IssuePinExpirationValidate(String Level, String Result, String ExpirationResponse, String UserName, String OrgName, String Pin, String VerifyURL, String OAuth_Token, String Expected){
+	@Test(dataProvider = "dp",enabled = TestExpiration,dependsOnMethods = "MFAC_IssuePinExpiration", priority = 3)
+	public void MFAC_IssuePinExpirationValidate(String Level, String Result, String ExpirationResponse, String UserName, String OrgName, String Pin, String VerifyURL, String OAuth_Token, String Expected){
 		String Response = null;
 		Helper_Functions.PrintOut("Check that once the expiration time is over the user can no longer complete registration with expired pin number.", false);
 		try {
@@ -323,7 +323,7 @@ public class MFAC{
 
 	@SuppressWarnings("deprecation")  //add due to the date comparison 
 	@Test(dataProvider = "dp", enabled = TestExpiration, priority = 1)
-	public void AdditionalEnrollmentExpiration(String Level, String OrgName, String SecondOrg, String OAuth_Token, String IssueURL, String VerifyURL){
+	public void MFAC_AdditionalEnrollmentExpiration(String Level, String OrgName, String SecondOrg, String OAuth_Token, String IssueURL, String VerifyURL){
 		Helper_Functions.PrintOut("Verify that the user recieves the updated expiration time when changing enrollment method.", false);
 		
 		String Response = null, UserName = UserName(), Pin = null;
@@ -349,7 +349,7 @@ public class MFAC{
 				String LongExpirationMessage = "Not Validing the Expiraiton at this time, need to verify seperatly once the expiration has passed. Here is the CST time it will expire. " + ExpirationTime;
 				Helper_Functions.PrintOut(LongExpirationMessage, true);
 			}else if (SecondExpirationTime.compareTo(ExpirationTime) == 1) { //make sure second expiration is after initial would expire
-				String Expire[] = new String[] {"AdditionalEnrollmentExpiration: " + Response, dateFormat.format(ExpirationTime).toString(), UserName, SecondOrg, Pin, VerifyURL, OAuth_Token, "Success"};
+				String Expire[] = new String[] {Level, "MFAC_AdditionalEnrollmentExpiration: " + Response, dateFormat.format(ExpirationTime).toString(), UserName, SecondOrg, Pin, VerifyURL, OAuth_Token, "Success"};
 				ExpirationData.add(Expire);
 			}else {
 				//Test verify pin on valid request from the different org, this will not wait for the old one to have expired.
@@ -361,8 +361,8 @@ public class MFAC{
 		}
 	}
 
-	@Test(dataProvider = "dp",enabled = TestExpiration, dependsOnMethods = "AdditionalEnrollmentExpiration", priority = 3)
-	public void AdditionalEnrollmentExpirationValidate(String Level, String Result, String ExpirationResponse, String UserName, String OrgName, String Pin, String VerifyURL, String OAuth_Token, String Expected){
+	@Test(dataProvider = "dp",enabled = TestExpiration, dependsOnMethods = "MFAC_AdditionalEnrollmentExpiration", priority = 3)
+	public void MFAC_AdditionalEnrollmentExpirationValidate(String Level, String Result, String ExpirationResponse, String UserName, String OrgName, String Pin, String VerifyURL, String OAuth_Token, String Expected){
 		String Response = null;
 		Helper_Functions.PrintOut("Verify that the user can switch enrollment methods mid process and still complete registration.", false);
 		try {

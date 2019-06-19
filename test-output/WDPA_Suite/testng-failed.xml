@@ -5,11 +5,10 @@
     <listener class-name="SupportClasses.TestNG_ReportListener"/>
   </listeners>
   <test thread-count="8" name="WDPA_Test(failed)" parallel="methods">
-    <parameter name="Level" value="6"/>
+    <parameter name="Level" value="2"/>
     <classes>
       <class name="WDPA_Application.WDPA_SmokeTest">
         <methods>
-          <include name="WDPA_Express" invocation-numbers="0"/>
           <include name="WDPA_Ground" invocation-numbers="0"/>
           <include name="WDPA_LTLFreight" invocation-numbers="0"/>
           <include name="WDPA_ExpressFreight" invocation-numbers="0"/>

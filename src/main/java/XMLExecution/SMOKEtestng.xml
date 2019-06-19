@@ -9,17 +9,16 @@
 		<parameter name="Level" value="3" /> <!-- All test will run on these level(s) -->
     	<classes>
 			<class name="SupportClasses.Environment"/>
-			
 			<class name="WCRV_Application.WCRV_SmokeTest"/>
 			<class name="WPRL_Application.WPRL_SmokeTest"/>
 			<class name="WDPA_Application.WDPA_SmokeTest"/>
-			
 			<class name="WFCL_Application.WFCL_SmokeTest"/>
-			<!--
 			<class name="WIDM_Application.WIDM_SmokeTest"/>
 			<class name="WRTT_Application.WRTT_SmokeTest"/>
 			<class name="OADR_Application.OADR_SmokeTest"/>
 			<class name="ADAT_Application.ADAT_SmokeTest"/>
+			<!--
+
 			-->
     	</classes>
   	</test> 

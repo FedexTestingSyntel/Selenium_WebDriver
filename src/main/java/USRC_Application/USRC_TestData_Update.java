@@ -21,7 +21,7 @@ import ADMC_Application.ADMC_API_Endpoints;
 
 public class USRC_TestData_Update {
 
-	static String LevelsToTest = "3"; //Can but updated to test multiple levels at once if needed. Setting to "23" will test both level 2 and level 3.
+	static String LevelsToTest = "237"; //Can but updated to test multiple levels at once if needed. Setting to "23" will test both level 2 and level 3.
 
 	@BeforeClass
 	public void beforeClass() {
@@ -71,9 +71,7 @@ public class USRC_TestData_Update {
 				break;
 			case "Check_WCRV_Status":
 				for (User_Data User_Info: User_Info_Array) {
-    				if (User_Info.WCRV_ENABLED.contentEquals("Error")) {
-    					data.add(new Object[] {strLevel, User_Info});
-    				}else if (!User_Info.MIGRATION_STATUS.contentEquals("NA")) {
+    				if (User_Info.WCRV_ENABLED.contentEquals("")) {
     					data.add(new Object[] {strLevel, User_Info});
     				}
     			}
@@ -98,7 +96,7 @@ public class USRC_TestData_Update {
 		Helper_Functions.PrintOut(Test);
 	}
 	
-	@Test (dataProvider = "dp", enabled = false )
+	@Test (dataProvider = "dp", enabled = true )
 	public void Check_WCRV_Status(String Level, User_Data User_Info) {
 		boolean updatefile = false;
 		
@@ -127,7 +125,7 @@ public class USRC_TestData_Update {
 		}
 	}
 
-	@Test (dataProvider = "dp", enabled = true)
+	@Test (dataProvider = "dp", enabled = false)
 	public void CheckLogin(String Level, User_Data User_Info) {
 		Environment.getInstance().setLevel(Level);
 		USRC_Data USRC_Details = USRC_Data.LoadVariables(Level);
@@ -192,7 +190,7 @@ public class USRC_TestData_Update {
 		}
 	}
 	
-	@Test (dataProvider = "dp", enabled = true)
+	@Test (dataProvider = "dp", enabled = false)
 	public void CheckMigration(String Level, String UserID, String Password) {
 		Environment.getInstance().setLevel(Level);
 		USRC_Data USRC_Details = USRC_Data.LoadVariables(Level);
@@ -249,7 +247,7 @@ public class USRC_TestData_Update {
 			WCRV_Access = "T";
 		}else if (!AccountDetails.contains("displayRateSheetFlag")){
 			Helper_Functions.PrintOut("PRDC call did not return premission status.", false);
-			WCRV_Access = "Error";
+			WCRV_Access = "F";
 		}else {
 			if (AccountDetails.contains("displayRateSheetFlag\":false")){
 				//the user does not have the view rate sheet privilege

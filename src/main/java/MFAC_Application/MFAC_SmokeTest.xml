@@ -6,7 +6,7 @@
 	</listeners>
   
 	<test thread-count="3" name="MFAC_Test" parallel="methods" group-by-instances="true">
-		<parameter name="Level" value= "6" />
+		<parameter name="Level" value= "236" />
 		<classes>
 			<class name="SupportClasses.Environment"/>
       		<class name="MFAC_Application.MFAC"/>

@@ -5,26 +5,16 @@
 		<listener class-name="SupportClasses.TestNG_ReportListener"/>
 	</listeners>
 	
-	<test thread-count="8" name="ADAT">
+	<test thread-count="8" name="Env">
 		<parameter name="Level" value="3" /> <!-- All test will run on these level(s) -->
     	<classes>
 			<class name="SupportClasses.Environment"/>
-			<class name="ADAT_Application.ADAT_SmokeTest"/>
     	</classes>
   	</test> 
-  	<test thread-count="8" name="WFCL">
+	<test thread-count="8" name="WRTT">
+		
     	<classes>
-			<class name="WFCL_Application.WFCL_SmokeTest"/>
-    	</classes>
-  	</test> 
-  	
-  	<test thread-count="8" name="WIDM">
-    	<classes>
-			<class name="WIDM_Application.WIDM_SmokeTest"/>
-    	</classes>
-  	</test>
-  	<test thread-count="8" name="WRTT">
-    	<classes>
+			
 			<class name="WRTT_Application.WRTT_SmokeTest"/>
     	</classes>
   	</test> 
@@ -48,4 +38,24 @@
 			<class name="OADR_Application.OADR_SmokeTest"/>
     	</classes>
   	</test> 
+  	
+  	<!--
+  	  	<test thread-count="8" name="WFCL">
+    	<classes>
+			<class name="WFCL_Application.WFCL_SmokeTest"/>
+    	</classes>
+  	</test>
+  	<test thread-count="8" name="WIDM">
+    	<classes>
+			<class name="WIDM_Application.WIDM_SmokeTest"/>
+    	</classes>
+  	</test>
+  	
+
+  	<test thread-count="8" name="ADAT">
+    	<classes>
+			<class name="ADAT_Application.ADAT_SmokeTest"/>
+    	</classes>
+  	</test> 
+			-->
 </suite>

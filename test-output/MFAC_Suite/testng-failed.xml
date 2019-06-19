@@ -10,14 +10,10 @@
       <class name="MFAC_Application.MFAC">
         <methods>
           <include name="beforeClass"/>
-          <include name="VerifyPinValid" invocation-numbers="0 1"/>
-          <include name="IssuePin" invocation-numbers="0 1"/>
-          <include name="AdditionalEnrollmentExpiration" invocation-numbers="0 1"/>
-          <include name="VerifyPinVelocity" invocation-numbers="0 1"/>
-          <include name="AddressVelocity" invocation-numbers="0 1"/>
-          <include name="IssuePinExpiration" invocation-numbers="1 0"/>
-          <include name="IssuePinVelocity" invocation-numbers="0 1"/>
-          <include name="VerifyPinNoLongerValid" invocation-numbers="1 0"/>
+          <include name="AdditionalEnrollmentExpirationValidate"/>
+          <include name="AdditionalEnrollmentExpiration"/>
+          <include name="IssuePinExpiration"/>
+          <include name="IssuePinExpirationValidate"/>
         </methods>
       </class> <!-- MFAC_Application.MFAC -->
     </classes>

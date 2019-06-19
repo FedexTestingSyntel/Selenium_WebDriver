@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>WFCL_Test_Invitations</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 19 01:17:39 CDT 2019</td>
+<td>Started on:</td><td>Sun Jun 16 01:56:17 CDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>180 seconds (180461 ms)</td>
+<tr><td>Total time:</td><td>219 seconds (219887 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,39 +75,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='IPAS_Application.IPAS_Invitation.IPAS_Invitation_Attempt()'><b>IPAS_Invitation_Attempt</b><br>Test class: IPAS_Application.IPAS_Invitation<br>Parameters: 7, Data_Structures.User_Data@42eb93e8, REGULAR</td>
-<td><div><pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;usersModule&apos;]/table/tbody[2]/tr[3]/td[2]/input&quot;}
-  (Session info: chrome=74.0.3729.157)
-  (Driver info: chromedriver=72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 3.21 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;WTC-5159473-l2&apos;, ip: &apos;172.27.142.145&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61818}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38), userDataDir=C:\Users\5159473\AppData\Local\Temp\scoped_dir29936_3349}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=74.0.3729.157, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 0926b419dfe935c2fc59707779480166
-*** Element info: {Using=xpath, value=//*[@id=&apos;usersModule&apos;]/table/tbody[2]/tr[3]/td[2]/input}
-	at IPAS_Application.IPAS_Invitation.IPAS_Invitation_Attempt(IPAS_Invitation.java:67)
+<td title='WADM_Application.WADM_Invitation.WADM_Invitation_Attempt()'><b>WADM_Invitation_Attempt</b><br>Test class: WADM_Application.WADM_Invitation<br>Parameters: 6, Data_Structures.User_Data@4d2f8916, REGULAR</td>
+<td><div><pre>java.lang.AssertionError: Text does not match.  By.tagName: body   Your updates have been saved.
+	at WADM_Application.WADM_Invitation.WADM_Invitation_Attempt(WADM_Invitation.java:64)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace437934882", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace437934882'><pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;usersModule&apos;]/table/tbody[2]/tr[3]/td[2]/input&quot;}
-  (Session info: chrome=74.0.3729.157)
-  (Driver info: chromedriver=72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 3.21 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
-System info: host: &apos;WTC-5159473-l2&apos;, ip: &apos;172.27.142.145&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61818}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38), userDataDir=C:\Users\5159473\AppData\Local\Temp\scoped_dir29936_3349}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=74.0.3729.157, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 0926b419dfe935c2fc59707779480166
-*** Element info: {Using=xpath, value=//*[@id=&apos;usersModule&apos;]/table/tbody[2]/tr[3]/td[2]/input}
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace193924355", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace193924355'><pre>java.lang.AssertionError: Text does not match.  By.tagName: body   Your updates have been saved.
 	at org.testng.Assert.fail(Assert.java:96)
-	at IPAS_Application.IPAS_Invitation.IPAS_Invitation_Attempt(IPAS_Invitation.java:67)
+	at WADM_Application.WADM_Invitation.WADM_Invitation_Attempt(WADM_Invitation.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -124,8 +104,72 @@ Session ID: 0926b419dfe935c2fc59707779480166
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>83</td>
-<td>IPAS_Application.IPAS_Invitation@70beb599</td></tr>
+<td>178</td>
+<td>WADM_Application.WADM_Invitation@36f0f1be</td></tr>
+<tr>
+<td title='WADM_Application.WADM_Invitation.WADM_Invitation_Attempt()'><b>WADM_Invitation_Attempt</b><br>Test class: WADM_Application.WADM_Invitation<br>Parameters: 6, Data_Structures.User_Data@4d2f8916, COMPANY</td>
+<td><div><pre>java.lang.AssertionError: Text does not match.  By.tagName: body   Your updates have been saved.
+	at WADM_Application.WADM_Invitation.WADM_Invitation_Attempt(WADM_Invitation.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace997231868", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace997231868'><pre>java.lang.AssertionError: Text does not match.  By.tagName: body   Your updates have been saved.
+	at org.testng.Assert.fail(Assert.java:96)
+	at WADM_Application.WADM_Invitation.WADM_Invitation_Attempt(WADM_Invitation.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>201</td>
+<td>WADM_Application.WADM_Invitation@36f0f1be</td></tr>
+<tr>
+<td title='WADM_Application.WADM_Invitation.WADM_Invitation_Attempt()'><b>WADM_Invitation_Attempt</b><br>Test class: WADM_Application.WADM_Invitation<br>Parameters: 6, Data_Structures.User_Data@4d2f8916, GROUP</td>
+<td><div><pre>java.lang.AssertionError: Text does not match.  By.tagName: body   Your updates have been saved.
+	at WADM_Application.WADM_Invitation.WADM_Invitation_Attempt(WADM_Invitation.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace845985156", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace845985156'><pre>java.lang.AssertionError: Text does not match.  By.tagName: body   Your updates have been saved.
+	at org.testng.Assert.fail(Assert.java:96)
+	at WADM_Application.WADM_Invitation.WADM_Invitation_Attempt(WADM_Invitation.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>217</td>
+<td>WADM_Application.WADM_Invitation@36f0f1be</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -135,30 +179,20 @@ Session ID: 0926b419dfe935c2fc59707779480166
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='IPAS_Application.IPAS_Invitation.IPAS_Invitation_Attempt()'><b>IPAS_Invitation_Attempt</b><br>Test class: IPAS_Application.IPAS_Invitation<br>Parameters: 7, Data_Structures.User_Data@42eb93e8, COMPANY</td>
+<td title='IPAS_Application.IPAS_Invitation.IPAS_Invitation_Attempt()'><b>IPAS_Invitation_Attempt</b><br>Test class: IPAS_Application.IPAS_Invitation<br>Parameters: 6, Data_Structures.User_Data@52010b6f, REGULAR</td>
 <td></td>
-<td>160</td>
-<td>IPAS_Application.IPAS_Invitation@70beb599</td></tr>
+<td>101</td>
+<td>IPAS_Application.IPAS_Invitation@157632c9</td></tr>
 <tr>
-<td title='IPAS_Application.IPAS_Invitation.IPAS_Invitation_Attempt()'><b>IPAS_Invitation_Attempt</b><br>Test class: IPAS_Application.IPAS_Invitation<br>Parameters: 7, Data_Structures.User_Data@42eb93e8, DEPARTMENT</td>
+<td title='IPAS_Application.IPAS_Invitation.IPAS_Invitation_Attempt()'><b>IPAS_Invitation_Attempt</b><br>Test class: IPAS_Application.IPAS_Invitation<br>Parameters: 6, Data_Structures.User_Data@52010b6f, COMPANY</td>
 <td></td>
-<td>179</td>
-<td>IPAS_Application.IPAS_Invitation@70beb599</td></tr>
+<td>101</td>
+<td>IPAS_Application.IPAS_Invitation@157632c9</td></tr>
 <tr>
-<td title='WADM_Application.WADM_Invitation.WADM_Invitation_Attempt()'><b>WADM_Invitation_Attempt</b><br>Test class: WADM_Application.WADM_Invitation<br>Parameters: 7, Data_Structures.User_Data@40f23067, COMPANY</td>
+<td title='IPAS_Application.IPAS_Invitation.IPAS_Invitation_Attempt()'><b>IPAS_Invitation_Attempt</b><br>Test class: IPAS_Application.IPAS_Invitation<br>Parameters: 6, Data_Structures.User_Data@52010b6f, DEPARTMENT</td>
 <td></td>
-<td>112</td>
-<td>WADM_Application.WADM_Invitation@11c20519</td></tr>
-<tr>
-<td title='WADM_Application.WADM_Invitation.WADM_Invitation_Attempt()'><b>WADM_Invitation_Attempt</b><br>Test class: WADM_Application.WADM_Invitation<br>Parameters: 7, Data_Structures.User_Data@40f23067, REGULAR</td>
-<td></td>
-<td>133</td>
-<td>WADM_Application.WADM_Invitation@11c20519</td></tr>
-<tr>
-<td title='WADM_Application.WADM_Invitation.WADM_Invitation_Attempt()'><b>WADM_Invitation_Attempt</b><br>Test class: WADM_Application.WADM_Invitation<br>Parameters: 7, Data_Structures.User_Data@40f23067, GROUP</td>
-<td></td>
-<td>136</td>
-<td>WADM_Application.WADM_Invitation@11c20519</td></tr>
+<td>135</td>
+<td>IPAS_Application.IPAS_Invitation@157632c9</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -170,13 +204,13 @@ Session ID: 0926b419dfe935c2fc59707779480166
 <tr>
 <td title='SupportClasses.Environment.SetEvironmentLevel()'><b>SetEvironmentLevel</b><br>Test class: SupportClasses.Environment<br>Parameters: 7</td>
 <td><div><pre>org.testng.SkipException: Forcing skip, will be deleted from report later
-	at SupportClasses.Environment.SetEvironmentLevel(Environment.java:67)
+	at SupportClasses.Environment.SetEvironmentLevel(Environment.java:69)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1366710401", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1366710401'><pre>org.testng.SkipException: Forcing skip, will be deleted from report later
-	at SupportClasses.Environment.SetEvironmentLevel(Environment.java:67)
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace800858903", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace800858903'><pre>org.testng.SkipException: Forcing skip, will be deleted from report later
+	at SupportClasses.Environment.SetEvironmentLevel(Environment.java:69)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -192,7 +226,7 @@ Session ID: 0926b419dfe935c2fc59707779480166
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>SupportClasses.Environment@2bbaf4f0</td></tr>
+<td>SupportClasses.Environment@667a738</td></tr>
 </table><p>
 </body>
 </html>

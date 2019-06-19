@@ -6,7 +6,7 @@
 	</listeners>
 	
   	<test thread-count="8" name="ADAT_Test" parallel="methods" group-by-instances="true">
-  		<parameter name="Level" value="3" />
+  		<parameter name="Level" value="236" />
     	<classes>
     		<class name="SupportClasses.Environment"/>
       		<class name="ADAT_Application.ADAT"/>

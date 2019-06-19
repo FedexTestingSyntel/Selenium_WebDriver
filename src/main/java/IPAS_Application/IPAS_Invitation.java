@@ -18,12 +18,12 @@ import SupportClasses.Helper_Functions;
 
 public class IPAS_Invitation {
 
-	static String LevelsToTest = "7";  
+	static String LevelsToTest = "6";  
 
 	@BeforeClass
 	public void beforeClass() {
 		Environment.SetLevelsToTest(LevelsToTest);
-		//Helper_Functions.MyEmail = "";//This is the email that the invites will be sent to.
+		Helper_Functions.MyEmail = "5159473@fedex.com";//This is the email that the invites will be sent to.
 	}
 	 
 	@DataProvider (parallel = true)

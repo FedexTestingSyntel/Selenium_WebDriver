@@ -43,7 +43,7 @@ public class Create_Accounts{
 	@DataProvider //(parallel = true)
 	public static Iterator<Object[]> dp(Method m) {
 		Helper_Functions.MyEmail = "accept@fedex.com";
-		String CountriesToCreate = "CA,";//end with a comma after each
+		String CountriesToCreate = "BR,";//end with a comma after each
 		
 		List<Object[]> data = new ArrayList<Object[]>();
 		ArrayList<String[]> AddressDetails = new ArrayList<String[]>();

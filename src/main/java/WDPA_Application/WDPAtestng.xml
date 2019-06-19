@@ -6,7 +6,7 @@
   	</listeners>
   
   	<test thread-count="8" name="WDPA_Test" parallel="methods" group-by-instances="true">
-  		<parameter name="Level" value="3" />
+  		<parameter name="Level" value="2" />
     	<classes>
     		<class name="SupportClasses.Environment"/>
       		<class name="WDPA_Application.WDPA_SmokeTest"/>

@@ -307,6 +307,9 @@ public class USRC_API_Endpoints {
 			httppost.setEntity(params);
 			//Note that an email will be triggered after registration
 			Response = General_API_Calls.HTTPCall(httppost, json);	
+			if (Response.contentEquals("{\"successful\":true,\"errorList\":[]}")) {
+				Helper_Functions.WriteUserToExcel(User, Password);//Write User to file for later reference
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			Response = e.getLocalizedMessage();
@@ -710,6 +713,11 @@ public class USRC_API_Endpoints {
 			if (Account.contentEquals("")) {
 				String NickName_Start = "{\"accountNickname\":\"", NickName_End = "\",\"accountNumber\":{";
 				Account = ParseRequest(Response, NickName_Start, NickName_End);
+				//if account nickname is blank will find the display name instead.
+				if (Account.contentEquals("")) {
+					String AccountNumber_Start = "displayName\":\"", AccountNumber_End = "\"";
+					Account = ParseRequest(Response, AccountNumber_Start, AccountNumber_End);	
+				}
 			}
 			Account = Account.replaceAll("\\u005f", "_");
 			if (AccountNumbers.contentEquals("")) {

@@ -4,38 +4,22 @@
   <listeners>
     <listener class-name="SupportClasses.TestNG_ReportListener"/>
   </listeners>
-  <test thread-count="8" name="WFCL(failed)" parallel="methods">
+  <test thread-count="8" name="Env(failed)" parallel="methods">
+    <parameter name="Level" value="3"/>
     <classes>
-      <class name="WFCL_Application.WFCL_SmokeTest">
+      <class name="SupportClasses.Environment">
         <methods>
-          <include name="WFCL_INETReg" invocation-numbers="0"/>
-          <include name="WFCL_WDPA" invocation-numbers="0"/>
-          <include name="WFCL_CreditCardRegistration" invocation-numbers="0"/>
-          <include name="beforeClass"/>
-          <include name="WFCL_AdminReg" invocation-numbers="0"/>
+          <include name="SetEvironmentLevel" invocation-numbers="0"/>
         </methods>
-      </class> <!-- WFCL_Application.WFCL_SmokeTest -->
+      </class> <!-- SupportClasses.Environment -->
     </classes>
-  </test> <!-- WFCL(failed) -->
-  <test thread-count="8" name="WIDM(failed)" parallel="methods">
-    <classes>
-      <class name="WIDM_Application.WIDM_SmokeTest">
-        <methods>
-          <include name="WIDM_ResetPassword_Email" invocation-numbers="0"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- WIDM_Application.WIDM_SmokeTest -->
-    </classes>
-  </test> <!-- WIDM(failed) -->
+  </test> <!-- Env(failed) -->
   <test thread-count="8" name="WPRL(failed)" parallel="methods">
     <classes>
       <class name="WPRL_Application.WPRL_SmokeTest">
         <methods>
-          <include name="WPRL_AccountManagement_NonPasskey" invocation-numbers="0"/>
           <include name="WPRL_AccountManagement_Passkey" invocation-numbers="0"/>
-          <include name="WPRL_FDM" invocation-numbers="0"/>
           <include name="WPRL_ContactInfo_NonAdmin" invocation-numbers="0"/>
-          <include name="WPRL_ContactInfo_Admin" invocation-numbers="0"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- WPRL_Application.WPRL_SmokeTest -->
@@ -46,7 +30,6 @@
       <class name="WDPA_Application.WDPA_SmokeTest">
         <methods>
           <include name="WDPA_Express" invocation-numbers="0"/>
-          <include name="WDPA_Ground" invocation-numbers="0"/>
           <include name="WDPA_LTLFreight" invocation-numbers="0"/>
           <include name="WDPA_ExpressFreight" invocation-numbers="0"/>
           <include name="WDPA_LTLFreight_Anonymous" invocation-numbers="0"/>
@@ -59,9 +42,9 @@
     <classes>
       <class name="WCRV_Application.WCRV_SmokeTest">
         <methods>
-          <include name="WCRV_Generate_RateSheet" invocation-numbers="0 2 1 3"/>
+          <include name="WCRV_Generate_RateSheet" invocation-numbers="2"/>
           <include name="beforeClass"/>
-          <include name="WCRV_Generate_RateSheet_Passkey" invocation-numbers="3 2 1 0"/>
+          <include name="WCRV_Generate_RateSheet_Passkey" invocation-numbers="2"/>
           <include name="WCRV_Help_Link" invocation-numbers="0"/>
         </methods>
       </class> <!-- WCRV_Application.WCRV_SmokeTest -->
@@ -71,7 +54,7 @@
     <classes>
       <class name="OADR_Application.OADR_SmokeTest">
         <methods>
-          <include name="OADR_Apply_Discount_To_Account" invocation-numbers="0 4 1 2 3"/>
+          <include name="OADR_Apply_Discount_To_Account" invocation-numbers="0 4 1 3 2"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- OADR_Application.OADR_SmokeTest -->

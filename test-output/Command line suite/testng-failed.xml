@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]">
+  <test thread-count="5" name="Command line test(failed)">
+    <classes>
+      <class name="MFAC_Application.MFAC">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="AdditionalEnrollmentExpiration" invocation-numbers="6 7 2 3"/>
+          <include name="IssuePinExpiration" invocation-numbers="3 2 6 7"/>
+        </methods>
+      </class> <!-- MFAC_Application.MFAC -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
