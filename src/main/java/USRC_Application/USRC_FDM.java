@@ -102,6 +102,7 @@ public class USRC_FDM {
 			//4 - request a pin through MFAC as cannot see the pin generated from the above
 			Helper_Functions.PrintOut("Requesting pin through MFAC", false);
 			String UserName = UUID + "-" + ShareID;
+			Helper_Functions.PrintOut("The UserName (UUID-ShareId) is : " + UserName, false);
 			Response = MFAC_API_Endpoints.IssuePinAPI(UserName, MFAC_Org, MFAC_Details.AIssueURL, MFAC_Details.OAuth_Token);
 			//get the pin from the MFAC call
 			String Pin = MFAC_Helper_Functions.ParsePIN(Response);
