@@ -465,8 +465,6 @@ public class Helper_Functions{
 		return countrySpecificTaxInfo;
 	}
 	
-	
-	
 	public static String getRandomString(int Length) {
         //String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 		String SALTCHARS = "abcdefghijklmnopqrstuvwxyz";
@@ -582,6 +580,8 @@ public class Helper_Functions{
 	}
 	
 	public static boolean RemoveAccountFromAccount_Numbers(String Level, String Account_to_Delete) {
+		
+		///// come back later and remove this so that DeleteRowFromExcelis being used.
 		try {
 			Excellock.lock();
 			String fileName = DataDirectory + "\\AddressDetails.xls";
@@ -636,6 +636,89 @@ public class Helper_Functions{
 			fsIP.close(); 
 			//Open FileOutputStream to write updates
 			FileOutputStream output_file =new FileOutputStream(new File(fileName));  
+			//write changes
+			wb.write(output_file);
+			//close the stream
+			output_file.close();
+			wb.close();
+		}catch (Exception e) {
+			PrintOut("WARNING, Unble to remove account from excel.", true);
+			return false;
+		}finally {
+			Excellock.unlock();
+		}
+		PrintOut("Account number removed from testing file. " + Account_to_Delete, true);
+		return true;
+	}
+	
+	public static boolean DeleteRowFromExcel(String FileName, String SheetName, String Data[][], int KeyPosition[]) {
+		
+		
+		
+		// not working, come back later
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		try {
+			Excellock.lock();
+			//Read the spreadsheet that needs to be updated
+			FileInputStream fsIP= new FileInputStream(new File(FileName));  
+			//Access the workbook                  
+			HSSFWorkbook wb = new HSSFWorkbook(fsIP);
+			//Access the worksheet, so that we can update / modify it. 
+			HSSFSheet worksheet = wb.getSheetAt(0);
+			for(int i = 1; i< wb.getNumberOfSheets() + 1;i++) {
+				//PrintOut("CurrentSheet: " + worksheet.getSheetName(), false);  //for debugging if getting errors with sheet not found
+				if (worksheet.getSheetName().contentEquals(SheetName)) {
+					break;
+				}
+				worksheet = wb.getSheetAt(i);
+			}
+			
+			//find what row contains the level and account number
+			DataFormatter formatter = new DataFormatter();
+			HSSFRow keyRow = worksheet.getRow(0);
+			int LevelColumn = -1, Account_NumberColumn = -1;
+			for (int key = 0; key < keyRow.getLastCellNum(); key++) {
+				if (formatter.formatCellValue(keyRow.getCell(key)).contentEquals("Level")) {
+					LevelColumn = key;
+				}else if (formatter.formatCellValue(keyRow.getCell(key)).contentEquals("Account_Number")) {
+					Account_NumberColumn = key;
+				}
+			}
+			
+			if (LevelColumn == -1 || Account_NumberColumn == -1) {
+				PrintOut("Warning, Identifiers not found: LevelColumn=" + LevelColumn + ", Account_NumberColumn=" + Account_NumberColumn, false);
+			}
+			
+			for (int j = 0 ; j < worksheet.getLastRowNum(); j++) {
+				try {
+					HSSFRow removingRow = worksheet.getRow(j);
+					if(removingRow != null){
+						
+						String Lvl = formatter.formatCellValue(removingRow.getCell(LevelColumn));
+						String Account = formatter.formatCellValue(removingRow.getCell(Account_NumberColumn));
+						if (Lvl.contentEquals(Level) && Account.contentEquals(Account_to_Delete)) {
+							worksheet.removeRow(removingRow);
+							break;
+						}
+					}	
+				}catch (Exception e) {}
+				
+			}
+		
+			//Close the InputStream  
+			fsIP.close(); 
+			//Open FileOutputStream to write updates
+			FileOutputStream output_file =new FileOutputStream(new File(FileName));  
 			//write changes
 			wb.write(output_file);
 			//close the stream

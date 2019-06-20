@@ -21,7 +21,7 @@ import ADMC_Application.ADMC_API_Endpoints;
 
 public class USRC_TestData_Update {
 
-	static String LevelsToTest = "237"; //Can but updated to test multiple levels at once if needed. Setting to "23" will test both level 2 and level 3.
+	static String LevelsToTest = "3"; //Can but updated to test multiple levels at once if needed. Setting to "23" will test both level 2 and level 3.
 
 	@BeforeClass
 	public void beforeClass() {
@@ -96,7 +96,7 @@ public class USRC_TestData_Update {
 		Helper_Functions.PrintOut(Test);
 	}
 	
-	@Test (dataProvider = "dp", enabled = true )
+	@Test (dataProvider = "dp", enabled = false )
 	public void Check_WCRV_Status(String Level, User_Data User_Info) {
 		boolean updatefile = false;
 		
@@ -125,7 +125,7 @@ public class USRC_TestData_Update {
 		}
 	}
 
-	@Test (dataProvider = "dp", enabled = false)
+	@Test (dataProvider = "dp", enabled = true)
 	public static void CheckLogin(String Level, User_Data User_Info) {
 		Environment.getInstance().setLevel(Level);
 		USRC_Data USRC_Details = USRC_Data.LoadVariables(Level);

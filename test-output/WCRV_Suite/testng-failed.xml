@@ -9,9 +9,8 @@
     <classes>
       <class name="WCRV_Application.WCRV_SmokeTest">
         <methods>
-          <include name="WCRV_Generate_RateSheet" invocation-numbers="3 2 1 0"/>
+          <include name="WCRV_Generate_RateSheet" invocation-numbers="3"/>
           <include name="beforeClass"/>
-          <include name="WCRV_Generate_RateSheet_Passkey" invocation-numbers="0 3 2 1"/>
           <include name="WCRV_Help_Link" invocation-numbers="0"/>
         </methods>
       </class> <!-- WCRV_Application.WCRV_SmokeTest -->

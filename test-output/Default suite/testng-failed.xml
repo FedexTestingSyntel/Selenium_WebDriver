@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="USRC_Application.USRC_FDM">
+      <class name="USRC_Application.USRC_TestData_Update">
         <methods>
+          <include name="CheckLogin" invocation-numbers="0 2 7 6 3 1 5"/>
           <include name="beforeClass"/>
-          <include name="EndtoEndEnrollment" invocation-numbers="0 1 2 3 4"/>
         </methods>
-      </class> <!-- USRC_Application.USRC_FDM -->
+      </class> <!-- USRC_Application.USRC_TestData_Update -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

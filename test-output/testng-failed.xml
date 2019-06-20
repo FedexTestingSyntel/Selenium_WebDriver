@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="8" guice-stage="DEVELOPMENT" name="Failed suite [WCRV_Suite]" parallel="methods">
+  <listeners>
+    <listener class-name="SupportClasses.TestNG_ReportListener"/>
+  </listeners>
+  <test thread-count="8" name="WCRV_Test(failed)" parallel="methods">
+    <parameter name="Level" value="3"/>
     <classes>
-      <class name="USRC_Application.USRC_FDM">
+      <class name="WCRV_Application.WCRV_SmokeTest">
         <methods>
+          <include name="WCRV_Generate_RateSheet" invocation-numbers="3"/>
           <include name="beforeClass"/>
-          <include name="EndtoEndEnrollment" invocation-numbers="0 1 2 3 4"/>
+          <include name="WCRV_Help_Link" invocation-numbers="0"/>
         </methods>
-      </class> <!-- USRC_Application.USRC_FDM -->
+      </class> <!-- WCRV_Application.WCRV_SmokeTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- WCRV_Test(failed) -->
+</suite> <!-- Failed suite [WCRV_Suite] -->
